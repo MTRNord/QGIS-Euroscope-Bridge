@@ -13,8 +13,9 @@ euroscope_exporter
 fileUtilities
 Input/GeoJSON/*
 !Input/GeoJSON/readme.md
-output/*
+Output
 QGIS.code-workspace
 GUI.py
 colors.json
 NOVA
+.mypy_cache

@@ -15,19 +15,19 @@
             },
             {
                 "Name": "AirspaceC",
-                "Hex": "#204020"
+                "Hex": "#1f3f24"
             },
             {
                 "Name": "AirspaceD",
-                "Hex": "#008080"
+                "Hex": "#1f3f24"
             },
             {
                 "Name": "AirspaceE",
-                "Hex": "#402040"
+                "Hex": "#1f3f24"
             },
             {
                 "Name": "AirspaceF",
-                "Hex": "#800080"
+                "Hex": "#1f3f24"
             },
             {
                 "Name": "AirspaceG",
@@ -35,7 +35,7 @@
             },
             {
                 "Name": "AoRapproach1",
-                "Hex": "#0000ff"
+                "Hex": "#4e4e50"
             },
             {
                 "Name": "AoRapproach2",
@@ -43,7 +43,7 @@
             },
             {
                 "Name": "AoRapproach3",
-                "Hex": "#915046"
+                "Hex": "#910546"
             },
             {
                 "Name": "AoRapproach4",
@@ -55,7 +55,7 @@
             },
             {
                 "Name": "AoRcenter1",
-                "Hex": "#646464"
+                "Hex": "#7b7a27"
             },
             {
                 "Name": "AoRcenter2",
@@ -83,43 +83,59 @@
             },
             {
                 "Name": "AoRground1",
-                "Hex": "#212121"
+                "Hex": "#800000"
             },
             {
                 "Name": "AoRground2",
                 "Hex": "#008000"
             },
             {
+                "Name": "ApronMarking",
+                "Hex": "#d3d3d3"
+            },
+            {
                 "Name": "ApronSurface",
-                "Hex": "#636363"
+                "Hex": "#808080"
             },
             {
                 "Name": "Building",
-                "Hex": "#383838"
+                "Hex": "#3c461e"
             },
             {
                 "Name": "Building2",
-                "Hex": "#3b3b51"
+                "Hex": "#808080"
             },
             {
                 "Name": "Centerlines",
-                "Hex": "#ffffff"
+                "Hex": "#c0c0c0"
             },
             {
                 "Name": "ClosureArea",
-                "Hex": "#171717"
+                "Hex": "#ff0000"
+            },
+            {
+                "Name": "Coastline",
+                "Hex": "#112162"
+            },
+            {
+                "Name": "DangerArea",
+                "Hex": "#800000"
+            },
+            {
+                "Name": "FIRBorder",
+                "Hex": "#dc0000"
             },
             {
                 "Name": "GrasSurface",
-                "Hex": "#404741"
+                "Hex": "#003200"
             },
             {
                 "Name": "GrasSurface2",
-                "Hex": "#27302b"
+                "Hex": "#202a30"
             },
             {
                 "Name": "GrasSurface3",
-                "Hex": "#474747"
+                "Hex": "#003b08"
             },
             {
                 "Name": "GrasSurface4",
@@ -127,19 +143,19 @@
             },
             {
                 "Name": "HardSurface1",
-                "Hex": "#636363"
+                "Hex": "#000080"
             },
             {
                 "Name": "HardSurface2",
-                "Hex": "#636363"
+                "Hex": "#373737"
             },
             {
                 "Name": "HardSurface3",
-                "Hex": "#636363"
+                "Hex": "#ff9900"
             },
             {
                 "Name": "HardSurface4",
-                "Hex": "#636363"
+                "Hex": "#ff0000"
             },
             {
                 "Name": "HardSurface5",
@@ -155,11 +171,11 @@
             },
             {
                 "Name": "Labels",
-                "Hex": "#bcbcbc"
+                "Hex": "#808080"
             },
             {
                 "Name": "Landmark1",
-                "Hex": "#008000"
+                "Hex": "#804000"
             },
             {
                 "Name": "Landmark2",
@@ -167,39 +183,43 @@
             },
             {
                 "Name": "Landmark3",
-                "Hex": "#636363"
-            },
-            {
-                "Name": "Landmark4",
-                "Hex": "#252500"
-            },
-            {
-                "Name": "Landmark5",
-                "Hex": "#3b3b51"
-            },
-            {
-                "Name": "Landmark6",
-                "Hex": "#ffff00"
-            },
-            {
-                "Name": "Landmark7",
                 "Hex": "#7e7e7e"
             },
             {
+                "Name": "Landmark4",
+                "Hex": "#3c461e"
+            },
+            {
+                "Name": "Landmark5",
+                "Hex": "#2d3719"
+            },
+            {
+                "Name": "Landmark6",
+                "Hex": "#212121"
+            },
+            {
+                "Name": "Landmark7",
+                "Hex": "#1a1a1a"
+            },
+            {
                 "Name": "MRVA1",
-                "Hex": "#6854d0"
+                "Hex": "#808080"
             },
             {
                 "Name": "MRVA2",
-                "Hex": "#443780"
+                "Hex": "#443708"
+            },
+            {
+                "Name": "OtherMrarking",
+                "Hex": "#808080"
             },
             {
                 "Name": "ParkPos",
-                "Hex": "#ccbb33"
+                "Hex": "#ff0000"
             },
             {
                 "Name": "ParkPosUnused",
-                "Hex": "#775533"
+                "Hex": "#ffffff"
             },
             {
                 "Name": "ProhibitedArea",
@@ -211,23 +231,35 @@
             },
             {
                 "Name": "Releaseline",
-                "Hex": "#706060"
+                "Hex": "#50afaf"
             },
             {
                 "Name": "RestrictedArea",
                 "Hex": "#800000"
             },
             {
+                "Name": "RunwayBorder",
+                "Hex": "#808080"
+            },
+            {
                 "Name": "RunwayConcrete",
-                "Hex": "#636363"
+                "Hex": "#c0c0c0"
+            },
+            {
+                "Name": "RunwayGrass",
+                "Hex": "#008000"
+            },
+            {
+                "Name": "RunwayMarking",
+                "Hex": "#808080"
             },
             {
                 "Name": "SID",
-                "Hex": "#005588"
+                "Hex": "#0000ff"
             },
             {
                 "Name": "STAR",
-                "Hex": "#885500"
+                "Hex": "#0000ff"
             },
             {
                 "Name": "Stopbar",
@@ -239,11 +271,11 @@
             },
             {
                 "Name": "TEST",
-                "Hex": "#e0e0e0"
+                "Hex": "#0e0e0e"
             },
             {
                 "Name": "TMA",
-                "Hex": "#2c3733"
+                "Hex": "#000000"
             },
             {
                 "Name": "TMZ",
@@ -251,11 +283,11 @@
             },
             {
                 "Name": "TWR-CTR",
-                "Hex": "#1a1a49"
+                "Hex": "#50afaf"
             },
             {
                 "Name": "Taxiway",
-                "Hex": "#ffff00"
+                "Hex": "#c0b631"
             },
             {
                 "Name": "TaxiwayYellow",
@@ -263,7 +295,7 @@
             },
             {
                 "Name": "TaxiwayBlue",
-                "Hex": "#0000ff"
+                "Hex": "#005ac1"
             },
             {
                 "Name": "TaxiwayBorder",
@@ -271,23 +303,23 @@
             },
             {
                 "Name": "TaxiwayGreen",
-                "Hex": "#008800"
+                "Hex": "#008000"
             },
             {
                 "Name": "TaxiwayGrey",
-                "Hex": "#808080"
+                "Hex": "#505050"
             },
             {
                 "Name": "TaxiwayOrange",
-                "Hex": "#ff8000"
+                "Hex": "#bc5e00"
             },
             {
                 "Name": "TaxiwayBrown",
-                "Hex": "#bc8650"
+                "Hex": "#a52a2a"
             },
             {
                 "Name": "TaxiwayPurple",
-                "Hex": "#990099"
+                "Hex": "#800080"
             },
             {
                 "Name": "Terrain1",
@@ -295,7 +327,7 @@
             },
             {
                 "Name": "Terrain2",
-                "Hex": "#643200"
+                "Hex": "#ffffff"
             },
             {
                 "Name": "Terrain3",
@@ -311,31 +343,31 @@
             },
             {
                 "Name": "Terrain6",
-                "Hex": "#643200"
+                "Hex": "#ff00ff"
             },
             {
                 "Name": "Terrain7",
-                "Hex": "#643200"
+                "Hex": "#500000"
             },
             {
                 "Name": "Terrain8",
-                "Hex": "#643200"
+                "Hex": "#808080"
             },
             {
                 "Name": "Terrain9",
-                "Hex": "#643200"
+                "Hex": "#32323c"
             },
             {
                 "Name": "UpperSector",
-                "Hex": "#422100"
+                "Hex": "#542c5b"
             },
             {
                 "Name": "VFR-Route",
-                "Hex": "#808080"
+                "Hex": "#000000"
             },
             {
                 "Name": "Vectors",
-                "Hex": "#808080"
+                "Hex": "#000000"
             },
             {
                 "Name": "Water",
@@ -346,26 +378,20 @@
             {
                 "Tag":"bl",
                 "Name":"Blue",
-                "Hex":"#0000ff",
+                "Hex":"#005ac1",
                 "Color":"TaxiwayBlue"
             },
             {
                 "Tag":"or",
                 "Name":"Orange",
-                "Hex":"#ff8000",
+                "Hex":"#bc5e00",
                 "Color":"TaxiwayOrange"
             },
             {
                 "Tag":"wt",
                 "Name":"White",
-                "Hex":"#ffffff",
+                "Hex":"#c0c0c0",
                 "Color":"Centerlines"
-            },
-            {
-                "Tag":"gy",
-                "Name":"Grey",
-                "Hex":"#808080",
-                "Color":""
             },
             {
                 "Tag":"rd",
@@ -376,13 +402,13 @@
             {
                 "Tag":"gn",
                 "Name":"Green",
-                "Hex":"#008800",
+                "Hex":"#008000",
                 "Color":"TaxiwayGreen"
             },
             {
                 "Tag":"pu",
                 "Name":"Purple",
-                "Hex":"#900090",
+                "Hex":"#800080",
                 "Color":"TaxiwayPurple"
             }
         ],
@@ -419,12 +445,22 @@
                 }
             }
         },
+        "building": {
+            "default": {
+                "Group":"$airport Groundlayout Infrastructure",
+                "Color":"Building",
+                "ES Category":"geo",
+                "Feature Type":"Polygon",
+                "Priority":32
+            },
+            "suffixes": {}
+        },
         "twy":{
             "default": {
                 "Group":"$airport Groundlayout Taxiways",
                 "Color":"TaxiwayGrey",
                 "ES Category":"geo",
-                "Feature Type":"Line"
+                "Feature Type":"Polygon"
             },
             "suffixes":{
                 "s":{
@@ -450,33 +486,17 @@
         },
         "lbl":{
             "default":{
-                "Group":"$airport Labels",
+                "Group":"$airport Groundlayout Infrastructure",
                 "Color":"",
                 "ES Category":"freetext",
                 "Feature Type":"Point"
             },
             "suffixes":{
                 "twy":{
-                    "Group":"$airport Taxiways",
-                    "Additional Suffixes": {
-                        "old":{
-                            "Group":"$airport Taxiways BA Old"
-                        },
-                        "new": {
-                            "Group":"$airport Taxiways BA"
-                        }
-                    }
+                    "Group":"$airport Groundlayout Taxiways"
                 },
                 "prkg":{
-                    "Group":"$airport Parkings",
-                    "Additional Suffixes": {
-                        "old":{
-                            "Group":"$airport Parkings BA Old"
-                        },
-                        "new": {
-                            "Group":"$airport Parkings BA"
-                        }
-                    }
+                    "Group":"$airport Groundlayout Parkings"
                 },
                 "hel":{
                     "Group":"$airport Helipads"
@@ -521,15 +541,15 @@
         },
         "rwy":{
             "default":{
-                "Group":"$airport Groundlayout",
-                "Color":"HardSurface2",
+                "Group":"$airport Groundlayout Runway",
+                "Color":"RunwayConcrete",
                 "ES Category":"regions",
                 "Feature Type":"Polygon",
                 "Priority":41
             },
             "suffixes":{
                 "gr":{
-                    "Color":"GrasSurface",
+                    "Color":"GrasSurface3",
                     "Priority":40
                 },
                 "cl":{
@@ -568,13 +588,13 @@
                     }
                 },
                 "mark":{
-                    "Group":"$airport Groundlayout Runway Markings",
-                    "Color":"Centerlines",
+                    "Group":"$airport Groundlayout RWY Ma",
+                    "Color":"RunwayConcrete",
                     "Priority":42,
                     "Ignore":true
                 },
                 "fato":{
-                    "Group":"$airport Groundlayout Runway Markings",
+                    "Group":"$airport Groundlayout RWY Ma",
                     "Color":"HelipadSurface",
                     "ES Category":"geo",
                     "Feature Type":"Line"
@@ -587,7 +607,7 @@
                 "Color":"HardSurface2",
                 "ES Category":"regions",
                 "Feature Type":"Polygon",
-                "Priority":100
+                "Priority":10
             },
             "suffixes":{
                 "prkg":{
@@ -630,6 +650,9 @@
 					"Group": "$airport FIZ",
                     "Color":"AoRground1",
                     "Priority":10
+                },
+                "grass":{
+                    "Color":"GrasSurface4"
                 }
             }
         }
