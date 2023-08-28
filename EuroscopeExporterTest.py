@@ -112,7 +112,7 @@ def format_feature_for_es(
     feature_object,
     feature_type: str,
 ):
-    coordinates: List[List[Tuple[float, float]]] = []
+    coordinates = []
 
     # Initially we need to check which category of ES object we're writing to as the formatting conventions in EuroScope / VRC aren't exactly standardized
     # First step is to format the color of the object for Euroscope, as at least this part is common to all object formats
@@ -168,6 +168,7 @@ def format_feature_for_es(
         else:
             coordinates = feature_object["Coordinates"]
     elif feature_object["Feature Type"] == "Point":
+        point_coordinates: Tuple[float, float] = (0.0, 0.0)
         if not feature_type == "Point":
             if feature_type == "MultiPolygon":
                 logging.warning(
@@ -175,16 +176,35 @@ def format_feature_for_es(
                     + feature_object["Group"]
                     + " to a Euroscope freetext point, only the first coordinate will be considered.\n"
                 )
-                coordinates = feature_object["Coordinates"][0][0]
+                point_coordinates = feature_object["Coordinates"][0][0]
             if feature_type == "MultiLineString":
                 logging.warning(
                     "Mapping a line feature of group "
                     + feature_object["Group"]
                     + " to a Euroscope freetext point, only the first coordinate will be considered.\n"
                 )
-                coordinates = feature_object["Coordinates"][0]
+                point_coordinates = feature_object["Coordinates"][0]
         else:
-            coordinates = feature_object["Coordinates"]
+            point_coordinates = feature_object["Coordinates"]
+
+        if feature_object["ES Category"] == "freetext":
+            if "Label" in feature_object:
+                output_text = (
+                    decimal_degrees_to_es_notation(point_coordinates).replace(" ", ":")
+                    + ":"
+                    + feature_object["Group"]
+                    + ":"
+                    + feature_object["Label"]
+                    + "\n"
+                )
+                return output_text
+            else:
+                logging.error(
+                    "Missing label attribute for a freetext feature of group "
+                    + feature_object["Group"]
+                    + ", skipping feature.\n"
+                )
+                sys.exit(-1)
     else:
         logging.error(
             "Something went wrong with a feature object at "
@@ -292,25 +312,6 @@ def format_feature_for_es(
         return coordinate_text
 
     # And lastly, freetext, which is the simplest of the feature types as it only covers one point per item
-
-    elif feature_object["ES Category"] == "freetext":
-        if "Label" in feature_object:
-            output_text = (
-                decimal_degrees_to_es_notation(coordinates).replace(" ", ":")
-                + ":"
-                + feature_object["Group"]
-                + ":"
-                + feature_object["Label"]
-                + "\n"
-            )
-            return output_text
-        else:
-            logging.error(
-                "Missing label attribute for a freetext feature of group "
-                + feature_object["Group"]
-                + ", skipping feature.\n"
-            )
-            sys.exit(-1)
     else:
         # If we're dealing with any other feature type (this should only happen with faulty definitions) I sys.exit(-1) to prevent the function calling
         # this from complaining.
@@ -377,6 +378,7 @@ def format_feature_for_gng(feature_object, feature_type: str):
         else:
             coordinates = feature_object["Coordinates"]
     elif feature_object["Feature Type"] == "Point":
+        point_coordinates: Tuple[float, float] = (0.0, 0.0)
         if not feature_type == "Point":
             if feature_type == "MultiPolygon":
                 logging.warning(
@@ -384,16 +386,40 @@ def format_feature_for_gng(feature_object, feature_type: str):
                     + feature_object["Group"]
                     + " to a Euroscope freetext point, only the first coordinate will be considered.\n"
                 )
-                coordinates = feature_object["Coordinates"][0][0]
+                point_coordinates = feature_object["Coordinates"][0][0]
             if feature_type == "MultiLineString":
                 logging.warning(
                     "Mapping a line feature of group "
                     + feature_object["Group"]
                     + " to a Euroscope freetext point, only the first coordinate will be considered.\n"
                 )
-                coordinates = feature_object["Coordinates"][0]
+                point_coordinates = feature_object["Coordinates"][0]
         else:
-            coordinates = feature_object["Coordinates"]
+            point_coordinates = feature_object["Coordinates"]
+
+        if feature_object["ES Category"] == "freetext":
+            if "Label" in feature_object:
+                airport_ICAO = feature_object["Group"][:4]
+                labelgroup = feature_object["Group"][5:]
+                output_text = (
+                    decimal_degrees_to_es_notation(point_coordinates).replace(" ", ":")
+                    + "::"
+                    + feature_object["Label"]
+                )
+                feature_dict = {
+                    "Group": feature_object["Group"],
+                    "Airport": airport_ICAO,
+                    "Labelgroup": labelgroup,
+                    "Code": output_text,
+                }
+                return feature_dict
+            else:
+                logging.error(
+                    "Missing label attribute for a freetext feature of group "
+                    + feature_object["Group"]
+                    + ", skipping feature.\n"
+                )
+                sys.exit(-1)
     else:
         logging.error(
             "Something went wrong with a feature object at "
@@ -490,30 +516,6 @@ def format_feature_for_gng(feature_object, feature_type: str):
         return feature_dict
 
     # And lastly, freetext, which is the simplest of the feature types as it only covers one point per item
-
-    elif feature_object["ES Category"] == "freetext":
-        if "Label" in feature_object:
-            airport_ICAO = feature_object["Group"][:4]
-            labelgroup = feature_object["Group"][5:]
-            output_text = (
-                decimal_degrees_to_es_notation(coordinates).replace(" ", ":")
-                + "::"
-                + feature_object["Label"]
-            )
-            feature_dict = {
-                "Group": feature_object["Group"],
-                "Airport": airport_ICAO,
-                "Labelgroup": labelgroup,
-                "Code": output_text,
-            }
-            return feature_dict
-        else:
-            logging.error(
-                "Missing label attribute for a freetext feature of group "
-                + feature_object["Group"]
-                + ", skipping feature.\n"
-            )
-            sys.exit(-1)
 
     # If we're dealing with any other feature type (this should only happen with faulty definitions) I sys.exit(-1) to prevent the function calling
     # this from complaining.
